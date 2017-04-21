@@ -1,0 +1,117 @@
+<html>
+	<head>
+		<meta charset="UTF8">
+		<title>Pablo Farfan Chavez. Computador universitario. Programador. Gamer.</title>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<header>
+			<div class="header-container">
+				<p>pablochavez15@gmail.com</p>
+			</div>			
+		</header>
+
+		<section class="hero">
+			<div class="content">
+				<h1>Pablo Farfan Chavez</h1>
+				<h2>Futuro Lic. en Analisis de Sistemas. Computador Universitario.</h2>
+				<h2>PHP y Javascript. Cierta inclinacion por lo estatico.</h2>
+				<h2>El loco de las series. Futbol sin pasion.</h2>
+				<div class="social-icons">
+					<a href="https://twitter.com/pabcha" target="_blank">
+						<img class="icon" src="icons/twitter.svg" alt="Twitter">
+					</a>
+					<a href="https://github.com/pabcha" target="_blank">
+						<img class="icon" src="icons/github.svg" alt="Github">
+					</a>
+					<a href="#" target="_blank">
+						<img class="icon" src="icons/linkedin.svg" alt="Linked in">
+					</a>					
+				</div>
+			</div>
+			<canvas id="mycanvas"></canvas>	
+		</section>	
+
+		<script>
+			var canvas, ctx, x, y, walkers = [];
+			var step = 10, 
+					linew = 1,
+					quantity = 50, 
+					colors = [
+						"rgba(255, 0, 0, .1)",
+						"rgba(255,127 ,0 , .1)",
+						"rgba(255,255 ,0 , .1)",
+					  "rgba(0,255 ,0, .1)",
+					  "rgba(0,0,255 , .1)",
+					  "rgba(75,0,130,.1)",
+					  "rgba(143,0,255 , .1)"
+					];
+
+			var Walker = function(x, y, color) {
+				this.x = x;
+				this.y = y;
+				this.color = color;
+			}
+
+			Walker.prototype.update = function(x, y) {
+				this.x = x;
+				this.y = y;
+			}
+
+			function rand(max) {
+				return Math.floor((max) * Math.random());
+			}
+
+			function init() {
+				canvas = document.getElementById('mycanvas');				
+				canvas.height = window.innerHeight;
+				canvas.width = window.innerWidth;
+
+				x = Math.floor(canvas.width /2 );
+				y = Math.floor(canvas.height / 2);
+
+				ctx = canvas.getContext("2d");
+				ctx.lineWidth = linew;
+
+				for (var i = 0; i < quantity; i++) {
+					walkers.push(new Walker(x, y, colors[rand(7)]));
+				}
+			}
+
+			function drawEach(walker) {
+				var x = walker.x, y = walker.y;
+				var num = Math.random();
+
+				if ( num < 0.25) {
+					if(walker.x < canvas.width) x += step;
+				} else if (num < 0.5) {
+					if(walker.x  > 0) x -= step;
+				} else if (num < 0.75) {
+					if(walker.y < canvas.height) y += step;
+				} else {
+					if(walker.y > 0) y -= step;
+				}
+
+				ctx.strokeStyle = walker.color;
+
+				ctx.beginPath();
+				ctx.moveTo(walker.x, walker.y);
+				ctx.lineTo(x, y);
+				ctx.stroke();
+
+				walker.update(x, y);					
+			}
+
+			function draw() {
+				walkers.forEach(drawEach);
+				requestAnimationFrame(draw);
+			}
+
+			window.onload = function() {
+				init();
+				requestAnimationFrame(draw);
+			}
+		</script>
+	</body>
+</html>
