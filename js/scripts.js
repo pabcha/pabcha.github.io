@@ -1,16 +1,16 @@
 var canvas, ctx, x, y, walkers = [];
 var step = 10, 
-	linew = 1,
-	quantity = 50, 
-	colors = [
-		"rgba(255, 0, 0, .1)",
-		"rgba(255,127 ,0 , .1)",
-		"rgba(255,255 ,0 , .1)",
-		"rgba(0,255 ,0, .1)",
-		"rgba(0,0,255 , .1)",
-		"rgba(75,0,130,.1)",
-		"rgba(143,0,255 , .1)"
-	];
+		linew = 1,
+		quantity = 50, 
+		colors = [
+			"rgba(255, 0, 0, .1)",
+			"rgba(255,127 ,0 , .1)",
+			"rgba(255,255 ,0 , .1)",
+		  "rgba(0,255 ,0, .1)",
+		  "rgba(0,0,255 , .1)",
+		  "rgba(75,0,130,.1)",
+		  "rgba(143,0,255 , .1)"
+		];
 
 var Walker = function(x, y, color) {
 	this.x = x;
