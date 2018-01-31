@@ -2,6 +2,8 @@ var canvas, ctx, x, y, walkers = [];
 var step = 10, 
   linew = 1,
   quantity = 50, 
+  btnPlayPause,
+  shouldDraw = true,
   colors = [
     "rgba(255, 0, 0, .1)",
     "rgba(255,127 ,0 , .1)",
@@ -68,11 +70,32 @@ function drawEach(walker) {
 }
 
 function draw() {
-  walkers.forEach(drawEach);
-  requestAnimationFrame(draw);
+  if (shouldDraw) {
+    walkers.forEach(drawEach);
+    requestAnimationFrame(draw);
+  }
+}
+
+function handler(e) {
+  e.preventDefault();
+
+  if (shouldDraw) {
+    shouldDraw = false;
+    btnPlayPause.innerHTML = 'Play';
+  } else {
+    shouldDraw = true;
+    btnPlayPause.innerHTML = 'Pause';
+    requestAnimationFrame(draw);
+  }
 }
 
 window.onload = function() {
   init();
   requestAnimationFrame(draw);
+  btnPlayPause = document.getElementById('btnPlayPause');
+  btnPlayPause.addEventListener('click', handler);
+
+  setTimeout(function() {
+    // animate button after 6 seconds
+  }, 6000);
 }

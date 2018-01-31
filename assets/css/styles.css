@@ -86,3 +86,20 @@ header {
     background-color: #fff;
     color: #e74c3c;
   }
+
+.game-nav {
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+.btn-pause {  
+  display: inline-block;
+  color: #fff;
+  padding: 10px;
+  opacity: .4; 
+  text-decoration: none;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
