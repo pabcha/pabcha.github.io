@@ -57,10 +57,31 @@ header {
 }
 
 .social-icons {
-  margin-top: 35px;
+  margin-top: 0px;
+  margin-bottom: 10px;
 }
 
 .social-icons a {
   text-decoration: none;
   margin: 0 10px;
 }
+
+.hero-nav {
+  text-align: center;
+  margin: 1.5rem 1rem;
+}
+  .hero-nav a {    
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    padding: 14px 20px;
+    border: 1px solid #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    letter-spacing: 0px;
+    transition: .3s;
+  }
+  .hero-nav a:hover {
+    background-color: #fff;
+    color: #e74c3c;
+  }
