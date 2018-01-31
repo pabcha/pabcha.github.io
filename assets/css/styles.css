@@ -43,7 +43,8 @@ header {
   }
   .hero .content {
     position: absolute;
-    top: 38%;
+    top: 50%;
+    transform: translateY(-50%);
     letter-spacing: 3px;
     padding: 40px;
     text-align: center;
