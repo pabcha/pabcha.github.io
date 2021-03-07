@@ -1,7 +1,7 @@
 var canvas, ctx, x, y, walkers = [];
 var step = 10, 
   linew = 1,
-  quantity = 50, 
+  quantity = 30, 
   btnPlayPause,
   shouldDraw = true,
   colors = [
@@ -96,6 +96,8 @@ window.onload = function() {
   btnPlayPause.addEventListener('click', handler);
 
   setTimeout(function() {
-    // animate button after 6 seconds
-  }, 6000);
+    // stop after 1min
+    shouldDraw = false;
+    console.log('We stop walkers because they are tired :(');
+  }, 60000);
 }
