@@ -31,7 +31,7 @@ function rand(max) {
 
 function init() {
   canvas = document.getElementById('mycanvas');				
-  canvas.height = window.innerHeight;
+  canvas.height = window.innerHeight - 5;
   canvas.width = window.innerWidth;
 
   x = Math.floor(canvas.width /2 );
