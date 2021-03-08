@@ -79,3 +79,12 @@ ul > li img {
   max-width: 1240px;
   margin: 0 auto;
 }
+
+
+.icon {
+  width: 25px;
+  height: 25px;
+}
+.social-icons a {
+  text-decoration: none;
+}
