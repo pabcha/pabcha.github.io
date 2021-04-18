@@ -28,7 +28,14 @@ figure {
 ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 1.3em 0;
+}
+ul::after {
+  content: ".";
+  clear: both;
+  visibility: hidden;
+  display: block;
+  height: 0;
 }
 ul > li {
   width: 32%;
