@@ -44,6 +44,7 @@ ul > li {
 }
 ul > li img {
   width: 100%;
+  height: auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   
