@@ -87,7 +87,8 @@ header {
     letter-spacing: 0px;
     transition: .3s;
   }
-  .hero-nav a:hover {
+  .hero-nav a:hover,
+  .hero-nav a:focus-visible {
     background-color: #fff;
     color: #e74c3c;
   }
