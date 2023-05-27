@@ -1,8 +1,7 @@
 var canvas, ctx, x, y, walkers = [];
 var step = 10, 
   linew = 1,
-  quantity = 30, 
-  btnPlayPause,
+  quantity = 30,
   shouldDraw = true,
   colors = [
     "rgba(255, 0, 0, .1)",
@@ -81,10 +80,8 @@ function handler(e) {
 
   if (shouldDraw) {
     shouldDraw = false;
-    btnPlayPause.innerHTML = 'Play';
   } else {
     shouldDraw = true;
-    btnPlayPause.innerHTML = 'Pause';
     requestAnimationFrame(draw);
   }
 }
@@ -92,12 +89,10 @@ function handler(e) {
 window.onload = function() {
   init();
   requestAnimationFrame(draw);
-  btnPlayPause = document.getElementById('btnPlayPause');
-  btnPlayPause.addEventListener('click', handler);
 
   setTimeout(function() {
     // stop after 20 seg
     shouldDraw = false;
-    console.log('We stop walkers because they are tired :(');
+    console.log('We stop walkers because are tired :(');
   }, 20000);
 }
