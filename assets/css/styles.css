@@ -33,12 +33,12 @@ header {
     text-transform: uppercase;
     color: #e74c3c;
   }
-  .hero h2 {
+  .hero p {
     font-size: 18px;
     color: #bdc3c7;
   }
   .hero h1,
-  .hero h2 {
+  .hero p {
     margin-bottom: 10px;
   }
   .hero .content {
