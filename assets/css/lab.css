@@ -27,6 +27,7 @@ a:hover  {
 /* Helper classes */
 .width-max-1240 { max-width: 1240px; }
 .x-center { margin: 0 auto; }
+.y-center { transform: translateY(50%); }
 .none-text-decoration { text-decoration: none; }
 
 .color-header { color: #222; }
@@ -43,10 +44,7 @@ a:hover  {
 .mgb-11 {  margin-bottom: 11px; }
 .mgb-20 {  margin-bottom: 20px; }
 
-.absolute {
-  position: absolute;
-  transform: translateY(50%);
-}
+.absolute { position: absolute; }
 .clearfix::after {
   content: ".";
   clear: both;
