@@ -61,8 +61,13 @@ header {
   margin-top: 0px;
   margin-bottom: 10px;
 }
-
-.social-icons a {
+.social-icons > ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;  
+}
+.social-icon {
   text-decoration: none;
   margin: 0 10px;
 }
