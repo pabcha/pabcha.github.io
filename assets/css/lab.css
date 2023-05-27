@@ -19,7 +19,8 @@ figure {
 .head-title {
   margin-left: 1.2%;
   padding-bottom: 2rem;
-  text-align: center;  
+  text-align: center;
+  position: relative;
 }
   .head-title h2 {
     color: #444;
@@ -97,4 +98,9 @@ ul > li {
   }
 .social-icons a {
   text-decoration: none;
+}
+
+.absolute {
+  position: absolute;
+  transform: translateY(50%);
 }
