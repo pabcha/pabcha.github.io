@@ -96,8 +96,8 @@ window.onload = function() {
   btnPlayPause.addEventListener('click', handler);
 
   setTimeout(function() {
-    // stop after 1min
+    // stop after 20 seg
     shouldDraw = false;
     console.log('We stop walkers because they are tired :(');
-  }, 60000);
+  }, 20000);
 }
