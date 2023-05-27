@@ -1,3 +1,8 @@
+:root {
+  --screen-mobile-min: 425px;
+}
+
+/* Reset styles */
 body {
   margin: 0;
   background: #f4f7f6;
@@ -15,77 +20,28 @@ figure {
   padding: 0;
   overflow: hidden;
 }
-
-.head-title {
-  margin-left: 1.2%;
-  padding-bottom: 2rem;
-  text-align: center;
-  position: relative;
-}
-  .head-title h2 {
-    color: #444;
-  }
-
-.thumb {
-  background: white;
-  width: 32%;
-  float: left;
-  margin-left: 1.2%;
-}  
-  .thumb h2 {
-    font-size: 16px;
-  }
-  .thumb a {
-    font-weight: 500;
-    text-decoration: none;    
-  }
-    .thumb a:hover  {
-      text-decoration: underline;
-    }
-  .thumb .technologies {
-    font-size: 14px;
-    color: #585858;
-  }
-.thumb-img {
-  width: 100%;
-  height: auto;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out; 
-}
-.thumb-img:hover {
-  transform: scale(1.05);
-  opacity: 0.5; 
-}
-.thumb-body {
-  padding: 1.2rem;
-}
-.row {
-  margin-bottom: .7rem;
+a:hover  {
+  text-decoration: underline;
 }
 
-.block {
-  padding-top: 2rem;
-}
-.inner {
-  max-width: 1240px;
-  margin: 0 auto;
-}
+/* Helper classes */
+.width-max-1240 { max-width: 1240px; }
+.x-center { margin: 0 auto; }
+.none-text-decoration { text-decoration: none; }
 
+.color-header { color: #222; }
+.color-text-secondary { color: #585858; }
 
-.icon {
-  width: 25px;
-  height: 25px;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out; 
-}
-  .icon:hover {
-    transform: scale(1.05);
-  }
-.social-icons a {
-  text-decoration: none;
-}
+.f-weight-500 { font-weight: 500;}
+.f14 { font-size: 14px; }
+.f16 { font-size: 16px; }
 
+.pd-18 { padding: 18px; }
+.pdt-32 { padding-top: 32px; }
+
+.mgb-11 {  margin-bottom: 11px; }
 .mgb-20 {  margin-bottom: 20px; }
+
 .absolute {
   position: absolute;
   transform: translateY(50%);
@@ -96,4 +52,38 @@ figure {
   visibility: hidden;
   display: block;
   height: 0;
+}
+
+/* page styles */
+.head-title {
+  margin-left: 1.2%;
+  padding-bottom: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.thumb {
+  background: white;
+  width: 32%;
+  float: left;
+  margin-left: 1.2%;
+}  
+.thumb-img {
+  width: 100%;
+  height: auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; 
+}
+.thumb-img:hover {
+  transform: scale(1.05);
+  opacity: 0.5; 
+}
+.icon {
+  width: 25px;
+  height: 25px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; 
+}
+.icon:hover {
+  transform: scale(1.05);
 }
