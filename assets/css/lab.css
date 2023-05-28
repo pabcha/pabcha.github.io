@@ -41,12 +41,15 @@ a:hover {
 
 .pd-18 { padding: 18px; }
 .pdx-15 { padding: 0 15px; }
+.pdy-32 { padding: 32px 0; }
 .pdt-32 { padding-top: 32px; }
 .pdb-32 { padding-bottom: 32px; }
 
-.mgt-10 {  margin-top: 10px; }
-.mgb-11 {  margin-bottom: 11px; }
-.mgb-20 {  margin-bottom: 20px; }
+.mgy-32 { margin: 32px 0; }
+.mgt-10 { margin-top: 10px; }
+.mgb-11 { margin-bottom: 11px; }
+.mgb-20 { margin-bottom: 20px; }
+.mgb-32 { margin-bottom: 32px; }
 
 .absolute { position: absolute; }
 .clearfix::after {
@@ -63,9 +66,13 @@ a:hover {
 }
 
 /* page styles */
-.head-title {
-  margin-left: 1.2%;
+.head-title {  
+  padding: 24px 15px 32px;
   position: relative;
+}
+.title {
+  font-size: 26px;
+  color: #222;
 }
 
 .thumb {
