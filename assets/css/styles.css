@@ -3,6 +3,10 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   background-color: #111;
   color: #FFF;
@@ -27,6 +31,7 @@ header {
 .hero {
   position: relative;
   overflow: hidden;
+  height: 100%;
 }
   .hero h1 {
     font-size: 36px;
