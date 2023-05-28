@@ -75,13 +75,13 @@ a:hover {
   color: #222;
 }
 
+.projects {
+  display: flex;
+  flex-direction: column;
+}
 .thumb {
   margin-bottom: 20px;
   background: white;
-  /* background: white;
-  width: 32%;
-  float: left;
-  margin-left: 1.2%; */
 }  
 .thumb-img {
   width: 100%;
@@ -101,4 +101,24 @@ a:hover {
 }
 .icon:hover {
   transform: scale(1.05);
+}
+
+@media screen and (min-width: 500px) {
+  .projects {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .thumb { 
+    flex: 48%;
+    max-width: 48%;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .title { font-size: 32px; }
+  .thumb { 
+    flex: 32%;
+    max-width: 32%;
+  }
 }
