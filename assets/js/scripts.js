@@ -89,7 +89,7 @@ function handler(e) {
 }
 
 window.onload = function() {  
-  // if (!isMobile()) {
+  if (!isMobile()) {
     init();
     requestAnimationFrame(draw);
     
@@ -97,7 +97,7 @@ window.onload = function() {
       shouldDraw = false;
       console.log('We stop walkers because are tired :(');
     }, 60000);
-  // }
+  }
 }
 
 function isMobile() {
