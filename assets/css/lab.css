@@ -20,7 +20,7 @@ figure {
   padding: 0;
   overflow: hidden;
 }
-a:hover  {
+a:hover {
   text-decoration: underline;
 }
 
@@ -29,6 +29,8 @@ a:hover  {
 .x-center { margin: 0 auto; }
 .y-center { transform: translateY(50%); }
 .none-text-decoration { text-decoration: none; }
+.text-center { text-align: center; }
+.hidden-desktop { display: none; }
 
 .color-header { color: #222; }
 .color-text-secondary { color: #585858; }
@@ -38,9 +40,11 @@ a:hover  {
 .f16 { font-size: 16px; }
 
 .pd-18 { padding: 18px; }
+.pdx-15 { padding: 0 15px; }
 .pdt-32 { padding-top: 32px; }
 .pdb-32 { padding-bottom: 32px; }
 
+.mgt-10 {  margin-top: 10px; }
 .mgb-11 {  margin-bottom: 11px; }
 .mgb-20 {  margin-bottom: 20px; }
 
@@ -53,18 +57,24 @@ a:hover  {
   height: 0;
 }
 
+@media screen and (max-width: 768px) {
+  .hidden-desktop { display: block; }
+  .hidden-mobile { display: none; }
+}
+
 /* page styles */
 .head-title {
   margin-left: 1.2%;
-  text-align: center;
   position: relative;
 }
 
 .thumb {
+  margin-bottom: 20px;
   background: white;
+  /* background: white;
   width: 32%;
   float: left;
-  margin-left: 1.2%;
+  margin-left: 1.2%; */
 }  
 .thumb-img {
   width: 100%;
