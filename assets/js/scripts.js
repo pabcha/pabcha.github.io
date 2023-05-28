@@ -91,8 +91,7 @@ window.onload = function() {
   requestAnimationFrame(draw);
 
   setTimeout(function() {
-    // stop after 20 seg
     shouldDraw = false;
     console.log('We stop walkers because are tired :(');
-  }, 20000);
+  }, 60000);
 }
