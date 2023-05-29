@@ -50,7 +50,7 @@ header {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);    
-    padding: 40px;
+    padding: 20px;
     text-align: center;
     background: rgba(17, 17, 17, .8);
     width: 100%;
@@ -107,6 +107,9 @@ header {
   .hero p { font-size: 18px; }
   .hero .info {
     letter-spacing: 2px;
+  }
+  .hero .content {
+    padding: 40px;
   }
 }
 
