@@ -92,7 +92,7 @@ function createTimeout() {
   timeoutID = setTimeout(function() {
     shouldDraw = false;
     console.log('We stop walkers because are tired :(');
-  }, 10000);
+  }, 60000);
 }
 
 window.onload = function() {  
